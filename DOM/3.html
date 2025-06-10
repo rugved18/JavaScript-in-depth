@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="display">
+    <p id="value" ></p>
+</body>
+
+ <script>
+    const input = document.querySelector("input")
+    const value = document.querySelector("#value");
+    value.style.color = "blue";
+
+    const updateInput = (e)=>{
+        value.textContent = e.target.value;
+    }
+
+    input.addEventListener("input",updateInput);
+ </script>
+</html>

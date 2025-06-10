@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>show secret</button>
+    <p hidden> a magical </p>
+    
+</body>
+
+<script>
+
+   const btn = document.querySelector("button")
+
+   const secret = ()=>{
+    const p =document.querySelector("p");
+    p.toggleAttribute("hidden");
+   }
+
+   btn.addEventListener("click",secret);
+
+</script>
+</html>

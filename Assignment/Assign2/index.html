@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="formPage" class="form-page">
+            <div class="form-container">
+                <h2 class="text-center mb-4">Enter Your Name</h2>
+                <form id="nameForm" action="welcome.html" method="GET" target="_blank" onsubmit="return validateForm()">
+                    <div class="mb-3">
+                        <label for="nameField" class="form-label">Name (Alphabets only):</label>
+                        <input type="text" class="form-control" id="nameField" name="name" placeholder="Enter your name"
+                            required>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

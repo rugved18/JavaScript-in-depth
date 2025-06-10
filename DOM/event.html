@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button
+    onmouseenter ="mouse();" >click me</button>
+</body>
+
+<script>
+    // const  clickIt = ()=>{
+    //     console.log("rugved Kulkarni")
+    // }
+
+    //  const  clickItRam = ()=>{
+    //     console.log("hello!")
+    // }
+
+    // const clickI = ()=>{
+    //     clickIt();
+    //     clickItRam();
+    // }
+
+    const mouse =()=>{
+        console.log("you have entered the button!")
+    }
+
+    const btn = document.querySelector("button");
+
+    const clickIt =()=>{
+        console.log("I'm here")
+    }
+
+    btn.addEventListener('click',clickIt);
+</script>
+
+</html>

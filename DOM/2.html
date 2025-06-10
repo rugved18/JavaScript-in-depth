@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Play!</button>
+    <p id = "rand" hidden></p>
+    <p id="success" hidden> Your lucky</p>
+    <p id="fail" hidden>better luck next time</p>
+</body>
+
+<script>
+     
+     const btn = document.querySelector("button");
+     const randNum =document.getElementById("rand");
+     const success =document.getElementById("success");
+     const fail = document.getElementById("fail");
+     const work = () =>{
+        const rand = Math.floor( Math.random()*11);
+
+        randNum.textContent = `random number: ${rand}`;
+        randNum.hidden = false;
+         
+        success.hidden = true;
+        fail.hidden = true;
+
+        if(rand > 7){
+            success.hidden = false;
+        }else{
+            fail.hidden = false;
+        }
+     }
+
+     btn.addEventListener("click",work);
+</script>
+</html>

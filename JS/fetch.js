@@ -63,18 +63,32 @@
 
 
 
-async function results(){
-    const res = await fetch("https://www.craigslist.org/about/")
-    const data = await res.text();
-    console.log(data)
+// async function results(){
+//     const res = await fetch("https://www.craigslist.org/about/")
+//     const data = await res.text();
+//     console.log(data)
+// }
+
+// results();
+
+// async function results1(){
+//     const res = await fetch("https:/jsonplaceholder.typicode.com/posts/1")
+//     const data = await res.json();
+//     console.log(data)
+// }
+
+// results1();
+
+
+async function DataUser(){
+const res = await fetch("https:/jsonplaceholder.typicode.com/posts",{
+    method: 'POST',
+    headers: {'Content-type': 'application/json'},
+    body: JSON.stringify({name:'rugved',age:22})
+})
+   const data = await res.json();
+   console.log(data);
+
 }
 
-results();
-
-async function results1(){
-    const res = await fetch("https:/jsonplaceholder.typicode.com/posts/1")
-    const data = await res.json();
-    console.log(data)
-}
-
-results1();
+DataUser();
